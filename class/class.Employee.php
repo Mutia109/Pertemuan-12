@@ -3,7 +3,6 @@
         private $ssn='';
         private $fname = '';
         private $address = '';
-        private $hasil = false;
         private $message ='';
 
         public function __get($atribute) {

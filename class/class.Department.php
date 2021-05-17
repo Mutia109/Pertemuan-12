@@ -6,7 +6,6 @@
         private $dname = '';
         private $mgr_start_date = '';
         private $mgr;
-        private $hasil = false;
         private $message ='';
 
         public function __get($atribute) {

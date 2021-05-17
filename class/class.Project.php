@@ -6,7 +6,6 @@
         private $pname = '';
         private $plocation = '';
         private $dept;
-        private $hasil = false;
         private $message ='';
         public function __get($atribute) {
             if (property_exists($this, $atribute)) {
@@ -26,9 +25,7 @@
         }
 
         public function AddProject(){
-            $sql = "INSERT INTO project (pnumber, pname, plocation, dnum)
-            VALUES ($this->pnumber, '$this->pname', '$this->plocation', ".$this->dept->dnumber.")";
-            echo $sql;
+            $sql = "INSERT INTO project (pnumber, pname, plocation, dnum) VALUES ($this->pnumber, '$this->pname', '$this->plocation', ".$this->dept->dnumber.")";
             $this->hasil = mysqli_query($this->connection, $sql);
             if($this->hasil)
                 $this->message ='Data berhasil ditambahkan!';
